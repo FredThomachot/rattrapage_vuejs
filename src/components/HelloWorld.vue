@@ -1,7 +1,7 @@
 <template>
- <div>
-<app-project v-for="project in datax" :key="project._id" :title="project"></app-project>
- </div>
+  <div>
+  <app-project v-for="project in datax" :key="project._id" :title="project"></app-project>
+  </div>
 </template>
 
 <script>
@@ -213,13 +213,6 @@ h1, h2 {
   font-weight: normal;
 }
 
-#datasName{
-border-color: #42b983;
-border-style: solid;
-margin: 5px;
-width: 25%;
-}
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -231,4 +224,5 @@ li {
 a {
   color: #42b983;
 }
+
 </style>
