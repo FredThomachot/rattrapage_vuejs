@@ -2,15 +2,15 @@
 
  
       <div class="col-md-4">
-          <h2>{{title.name}}</h2>
-          <h3 v-if = "title.isActive === true">actif</h3>  
+          <h2>Projet : {{projet.name}}</h2>
+          <h6>{{projet.description}}</h6>
+        
+          <!-- <h3 v-if = "projet.isActive === true">actif</h3>  
           <h3 v-else class="nonActif">non actif</h3>
 
-          <input type="checkbox" id="checkbox" v-model="checked" v-if = "title.isActive === true"><label for="checkbox">actif</label>
+          <input type="checkbox" id="checkbox" v-model="checked" v-on:click = "projet.isActive = !projet.isActive"><label for="checkbox">Changer état</label>
           
-          
-
-          <h6 >Date de création: {{title.creation}}</h6>  
+          <h6 >Date de création: {{projet.creation}}</h6>   -->
 
       </div>
     
@@ -20,7 +20,7 @@
 <script>
 export default {
   name: 'Project',
-  props: ["title"],
+  props: ["projet"],
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -32,15 +32,19 @@ export default {
 <style>
 
 .col-md-4 {
+  background-color: aliceblue;
   border-color: #42b983;
   border-style: solid;
-  border-width: 1px;
-  text-align:end;
+  border-width: 3px;
+  text-align:justify;
   margin: 5px;
 }
 .nonActif {
   color:lightgrey;
 
+}
+h6 {
+  font-size: 14px;
 }
 
 
